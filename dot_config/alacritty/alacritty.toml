@@ -1,0 +1,27 @@
+[font]
+# normal = { family = "MesloLGL Nerd Font Mono", style = "Regular" }
+# normal = { family = "IBM Plex Mono", style = "Regular" }
+normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
+size = 16.0
+offset = { x = 0, y = 3 }
+
+[window]
+decorations = "buttonless"
+padding = { x = 10, y = 10 }
+#opacity = 0.2
+#blur = true
+
+[terminal]
+shell = "/opt/homebrew/bin/fish"
+
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[[keyboard.bindings]]
+key = "Q"
+mods = "Command"
+mode = "~Vi"
+action = "Quit"
+
