@@ -1,0 +1,29 @@
+{
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "GitHub Dark",
+    // "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily": "Cascadia Code Regular Light",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12.5,
+    "workbench.activityBar.location": "top",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.enablePreview": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line-thin",
+    "hediet.vscode-drawio.resizeImages": null,
+    "database-client.autoSync": true,
+    "php-cs-fixer.executablePath": "~/.config/composer/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist",
+    "php-cs-fixer.allowRisky": false,
+    "php-cs-fixer.pathMode": "override",
+    "php-cs-fixer.ignorePHPVersion": false,
+    "php-cs-fixer.exclude": [],
+    "php-cs-fixer.autoFixByBracket": false,
+    "php-cs-fixer.autoFixBySemicolon": false,
+    "php-cs-fixer.formatHtml": false,
+    "php-cs-fixer.documentFormattingProvider": true,
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    }
+}
