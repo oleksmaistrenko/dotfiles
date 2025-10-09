@@ -1,0 +1,6 @@
+shell-integration = fish
+keybind = shift+enter=text:\n
+theme = Catppuccin Mocha
+font-family = MesloLGM Nerd Font Mono
+macos-window-buttons = hidden
+macos-titlebar-style = tabs
