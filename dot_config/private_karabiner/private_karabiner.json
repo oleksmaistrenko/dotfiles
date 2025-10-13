@@ -4,15 +4,36 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change caps_lock to left_control if pressed with other keys, to caps_lock if pressed alone",
+                        "description": "Caps lock: control when held, toggle input sources when tapped",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Ukrainian-PC" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "caps_lock" }],
+                                "to_if_alone": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.ABC" } }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.ABC" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Ukrainian-PC" } }],
                                 "type": "basic"
                             }
                         ]
@@ -21,7 +42,7 @@
             },
             "name": "Default profile",
             "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
 }
