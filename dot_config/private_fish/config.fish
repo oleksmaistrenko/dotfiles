@@ -16,6 +16,7 @@ end
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 abbr -a -- gco 'git checkout'
 abbr -a -- gpl 'git pull'
+abbr -a -- gsw 'git switch'
 # abbr -a -- tfp 'terraform plan'
 # azure dev servers
 abbr -a -- devb2c 'azsh dev b2c'

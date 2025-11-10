@@ -62,7 +62,7 @@ function azsh
             set app_name "$service-$type-demo"
             set rg "rg-misto-demo"
 	case prod
-            set app_name "$service-$type-v2i"
+            set app_name "ca-$service-$type-v2i"
             set rg "misto-prod-v2"
         case '*'
             echo "Unknown environment: $env"

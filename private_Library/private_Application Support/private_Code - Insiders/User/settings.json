@@ -1,17 +1,35 @@
 {
+    // editor settings
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "GitHub Dark",
     // "editor.fontFamily": "Source Code Pro",
     "editor.fontFamily": "Cascadia Code Regular Light",
     "editor.fontLigatures": true,
     "editor.fontSize": 12.5,
+    "editor.lineHeight": 19,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line",
+    // workbench settings
+    "workbench.colorTheme": "GitHub Dark",
     "workbench.activityBar.location": "top",
     "workbench.sideBar.location": "right",
     "workbench.editor.enablePreview": false,
-    "editor.cursorBlinking": "solid",
-    "editor.cursorStyle": "line-thin",
-    "hediet.vscode-drawio.resizeImages": null,
-    "database-client.autoSync": true,
+    "workbench.editor.showTabs": "none",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 14,
+    // "workbench.statusBar.visible": false,
+    // php-cs-fixer settings
     "php-cs-fixer.executablePath": "~/.config/composer/vendor/bin/php-cs-fixer",
     "php-cs-fixer.onsave": true,
     "php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist",
