@@ -25,7 +25,7 @@ function azsh
         echo "  azsh <env> <service> [type]    # Connect to service"
         echo ""
         echo "Environments: dev, demo, prod"
-        echo "Services: b2c, odesa, bucha, khmelnytskyi, platform, vinnytsia, edu, surprise, hub (dev only)"
+        echo "Services: b2c, odesa, bucha, khmelnytskyi, platform, vinnytsia, edu, surprise, hub (dev/prod only)"
         echo "Types: server (default), cron"
         echo ""
         echo "Examples:"
@@ -40,14 +40,18 @@ function azsh
     set service $argv[2]
     set type (test (count $argv) -ge 3; and echo $argv[3]; or echo "server")
 
-    # Special case: hub service (dev only)
+    # Special case: hub service (dev and prod)
     if test "$service" = "hub"
-        if test "$env" != "dev"
-            echo "❌ 'hub' service is only available in dev environment"
+        if test "$env" = "dev"
+            set app_name "ca-eu-hub-nginx"
+            set rg "rg-misto-dev"
+        else if test "$env" = "prod"
+            set app_name "ca-eu-hub-nginx"
+            set rg "misto-prod-v2"
+        else
+            echo "❌ 'hub' service is only available in dev and prod environments"
             return 1
         end
-        set app_name "ca-eu-hub-nginx"
-        set rg "rg-misto-dev"
         echo "🛠️ Connecting to $bold$app_name$normal in $bold$rg$normal"
         command az containerapp exec --name $app_name --resource-group $rg --command "/bin/sh -l"
         return
