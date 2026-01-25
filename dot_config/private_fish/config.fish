@@ -21,6 +21,7 @@ abbr -a -- gsw 'git switch'
 # azure dev servers
 abbr -a -- devb2c 'azsh dev b2c'
 abbr -a -- devodesa 'azsh dev odesa'
+abbr -a -- gprl 'gh pr list'
 
 # Auto-update Homebrew every 24 hours
 set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
@@ -66,3 +67,5 @@ function fish_user_key_bindings
 end
 
 zoxide init fish 2>&1 | grep -v "bind.*-k" | source
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
