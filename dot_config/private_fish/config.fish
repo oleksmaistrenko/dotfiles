@@ -22,6 +22,7 @@ abbr -a -- gsw 'git switch'
 abbr -a -- devb2c 'azsh dev b2c'
 abbr -a -- devodesa 'azsh dev odesa'
 abbr -a -- gprl 'gh pr list'
+abbr -a -- zj zellij
 
 # Auto-update Homebrew every 24 hours
 set -gx HOMEBREW_AUTO_UPDATE_SECS 86400

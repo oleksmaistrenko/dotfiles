@@ -63,7 +63,7 @@ function azsh
             set app_name "ca-$service-$type-dev"
             set rg "rg-misto-dev"
         case demo
-            set app_name "$service-$type-demo"
+            set app_name "ca-$service-$type-demo"
             set rg "rg-misto-demo"
 	case prod
             set app_name "ca-$service-$type-v2i"

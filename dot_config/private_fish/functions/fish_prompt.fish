@@ -35,8 +35,8 @@ function fish_prompt --description 'Write out the prompt'
         end
     end
 
-    # First line: cat emoji, path, and git info
-    echo -s '🐈 '(set_color $cyan)(prompt_pwd)$git_info$normal
+    # First line: cat emoji, hostname, path, and git info
+    echo -s '🐈 '(set_color $blue)$hostname(set_color normal)' '(set_color $cyan)(prompt_pwd)$git_info$normal
 
     # Second line: status and prompt character
     echo -n -s $prompt_status (set_color $magenta)"$suffix "$normal
