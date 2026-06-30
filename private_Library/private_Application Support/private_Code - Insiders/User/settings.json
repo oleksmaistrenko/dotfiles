@@ -5,7 +5,8 @@
     "editor.fontFamily": "Cascadia Code Regular Light",
     "editor.fontLigatures": true,
     "editor.fontSize": 12.5,
-    "editor.lineHeight": 19,
+    "editor.lineHeight": 20,
+    "editor.fontWeight": "300",  // Makes everything slightly lighter
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -18,6 +19,12 @@
     },
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 15,
+    "editor.smoothScrolling": true,
+    // "editor.cursorSmoothCaretAnimation": "on"
+    "editor.renderLineHighlight": "gutter",
+    //
+    // "breadcrumbs.enabled": false,
     // workbench settings
     "workbench.colorTheme": "GitHub Dark",
     "workbench.activityBar.location": "top",
@@ -29,6 +36,9 @@
     "workbench.tree.renderIndentGuides": "none",
     "workbench.tree.indent": 14,
     // "workbench.statusBar.visible": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "chat.tools.terminal.outputLocation": "chat",
     // php-cs-fixer settings
     "php-cs-fixer.executablePath": "~/.config/composer/vendor/bin/php-cs-fixer",
     "php-cs-fixer.onsave": true,

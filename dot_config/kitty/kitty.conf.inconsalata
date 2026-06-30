@@ -1,7 +1,7 @@
 # Font Configuration
 # font_family MapleMono-NF-Regular
-font_size 13.5
-adjust_column_width -1
+font_size 16.0
+adjust_column_width 0
 
 # Window Configuration
 hide_window_decorations titlebar-only
@@ -14,24 +14,14 @@ clipboard_control write-clipboard write-primary read-clipboard read-primary
 url_style curly
 
 # Tab bar style
-# tab_bar_style powerline
-# tab_powerline_style round
-# tab_bar_min_tabs 2
-# tab_title_max_length 25
-# tab_title_template "{index} {title}"
-# active_tab_font_style normal
-# inactive_tab_font_style normal
-tab_bar_margin_width      9
-tab_bar_margin_height     9 0
-tab_bar_style             custom
-tab_bar_min_tabs          1
-tab_separator             ""
+tab_bar_style powerline
+tab_powerline_style round
+tab_bar_min_tabs 2
+tab_title_max_length 25
+tab_title_template "{index} {title}"
+active_tab_font_style normal
+inactive_tab_font_style normal
 
-#tab_title_template        "{fmt.fg._414868}{fmt.bg.default}{fmt.fg._a9b1d6}{fmt.bg._414868} {title.split()[-1].split('/')[-1]} {fmt.fg._414868}{fmt.bg.default} "
-#active_tab_title_template "{fmt.fg._7aa2f7}{fmt.bg.default}{fmt.fg._1a1b26}{fmt.bg._7aa2f7} {title.split()[-1].split('/')[-1]} {fmt.fg._7aa2f7}{fmt.bg.default} "
-
-tab_title_template        "{fmt.fg.tab}{fmt.bg.default}{fmt.fg._a9b1d6}{fmt.bg.tab} {custom} {fmt.fg.tab}{fmt.bg.default} "
-active_tab_title_template "{fmt.fg.tab}{fmt.bg.default}{fmt.fg._1a1b26}{fmt.bg.tab} {custom} {fmt.fg.tab}{fmt.bg.default} "
 # Terminal Shell
 shell /opt/homebrew/bin/fish
 
@@ -64,10 +54,10 @@ wayland_titlebar_color system
 macos_titlebar_color #16161e
 
 # Tab bar colors
-active_tab_foreground   #7aa2f7
-active_tab_background   #7aa2f7
-inactive_tab_foreground #414868
-inactive_tab_background #414868
+active_tab_foreground   #c0caf5
+active_tab_background   #3d59a1
+inactive_tab_foreground #787c99
+inactive_tab_background #16161e
 tab_bar_background      #101014
 
 # The 16 terminal colors
@@ -149,7 +139,7 @@ allow_remote_control socket-only
 listen_on unix:/tmp/kitty
 
 # BEGIN_KITTY_FONTS
-font_family      family="Maple Mono NF"
+font_family      family="Inconsolata Nerd Font Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto

@@ -74,5 +74,12 @@ function azsh
     end
 
     echo "🛠️ Connecting to $bold$app_name$normal in $bold$rg$normal"
+    set keepalive_pid
+    if test "$env" = "dev"
+        fish -c "dev-keepalive $fish_pid" </dev/null >/dev/null 2>&1 &
+        set keepalive_pid $last_pid
+        disown $keepalive_pid 2>/dev/null
+    end
     command az containerapp exec --name $app_name --resource-group $rg --command "/bin/sh -l"
+    test -n "$keepalive_pid"; and kill $keepalive_pid 2>/dev/null
 end
